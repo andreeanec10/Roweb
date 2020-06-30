@@ -57,7 +57,6 @@ public class Main {
         for (int i = 0; i < A.length-1; i+=1) {
             int start = i+1;
             int stop = A.length;
-            //divide et impera has a time complexity O(n * log n)
             divideEtImpera(array,start, stop, array.get(i), diff, s2);
         }
         return s2;
@@ -66,9 +65,9 @@ public class Main {
     public static void main(String[] args) {
         int[] A = {1,3, 4, 8, 9, 11, 5, 7, 6};
         int diff = -1;
-        //first algorithm has a O(n^2) time complexity and O(1) space complexity
+        //first algorithm has a O(n^2) time complexity
         System.out.println(genSolution(A, diff));
-        //second algorithm has a O(n * log n) time complexity and a O(n) space complexity
+        //second algorithm has a O(n * log n) time complexity
         System.out.println(genFasterSolutin(A, diff));
     }
 }
